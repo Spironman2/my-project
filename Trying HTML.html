@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Tooltip</title>
+    <style>
+        /* Tooltip container */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            font-size: 300%; /* Same size as your h2 */
+            font-family: "Brush Script MT", cursive;
+        }
+
+        /* Tooltip text */
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: auto;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 100%; /* Position above the text */
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            font-size: 24px; /* Make tooltip text bigger */
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+
+        /* Show tooltip on hover */
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="tooltip">
+        Hover over this text to reveal something
+        <span class="tooltip-text">Logan's gay</span>
+    </h2>
+
+</body>
